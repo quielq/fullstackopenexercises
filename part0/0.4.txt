@@ -24,4 +24,4 @@ note over browser:
 Data inputted by the user is sent as the body of the POST-request.
 end note
 
-server-->browser: [{ content: "new note", date: "2021-08-21" }, ...]
+server-->browser: [{ content: "new note", date: "2021-08-21" }]

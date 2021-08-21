@@ -1,0 +1,24 @@
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: HTML-code
+
+note over browser:
+browser starts manipulating HTML code and executing js-code
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{ content: "Current DataHTML is easy", date: "2021-08-2119-05-23" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+browser-> server: HTTP POST  https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over browser:
+Event handler creates a new note and rerenders the note list on the page.
+New note is sent to the server
+[{ content: "new note", date: "2021-08-21" }]
+end note
+
+
